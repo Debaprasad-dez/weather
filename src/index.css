@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'montserrat',sans-serif;
+}
+.app{
+  background-image: url(./assets/cold-bg.jpg);
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-in-out;
+  min-height: 100vh;
+}
+.app.warm{
+  background-image: url(./assets/warm-bg.jpg);
+}
+main{
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.75));
+  padding: 25px;
+}
+.search-box{
+width: 100%;
+margin: 0 0 75px;
+}
+.search-box .search-bar{
+display: block;
+width: 100%;
+padding: 15px;
+
+appearance: none;
+border: none;
+background: none;
+outline: none;
+
+background-color: rgba(255, 255, 255, 0.5);
+border-radius: 0 0 16px 16px;
+margin-top: -25px;
+
+color: #313131;
+font-size: 20px;
+transition: 0.4 ease;
+}
+
+
+.search-box .search-bar:focus{
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.location-box .location{
+color: blanchedalmond;
+font-size: 32px;
+font-weight: 500;
+text-align: center;
+}
+
+.location-box .date{
+  color: rgb(255, 255, 255);
+font-size: 20px;
+font-weight: 300;
+text-align: center;
+}
+.weather-box{
+text-align: center;
+}
+
+.weather-box .temp{
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px 25px;
+  color: white;
+  font-size: 90px;
+  font-weight: 900;
+  text-align: center;
+}
+.weather-box .weather{
+  color: white;
+  font-size: 45px;
+  font-weight: 500;
+}
