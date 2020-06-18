@@ -42,7 +42,7 @@ function App() {
 
 
   return (
-    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
+    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 20) ? 'app warm' : 'app') : 'app'}>
       <main>
         <div className="search-box">
           <input 
@@ -53,7 +53,9 @@ function App() {
           value={query}
           onKeyPress={search}
           />
+          <p className="hint">city/state/country</p>
         </div>
+        
         {(typeof weather.main!="undefined")?(
           <div>
             <div className="location-box">
@@ -69,6 +71,9 @@ function App() {
           </div>
         ):('')}
         
+        <p className="logo">MyWeatherApp</p>
+        <p className="mail">debaprasadpaul033@gmail.com</p>
+        <img className="imgani" src="https://digitalsynopsis.com/wp-content/uploads/2015/10/gif-icons-menu-transition-animations-weather.gif" alt=""/>
       </main>
     </div>
   );
